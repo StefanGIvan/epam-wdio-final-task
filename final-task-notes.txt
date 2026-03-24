@@ -1,9 +1,0 @@
-create package.json: npm init -y
-install latest version of wdio: npm wdio@latest
-chose spec in the wizard for seeing results in the terminal too
-then installed allure-reporter locally: npm install @wdio/allure-reporter --save-dev
-open wdio.conf.js to add alure to reporters field to use allure reports
-install dependency allure-commandline to generate report from test results: npm install -g allure-commandline --save-dev
-create .gitignore
-
-Create project structure (POM)
