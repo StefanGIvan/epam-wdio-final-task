@@ -1,5 +1,5 @@
 class InventoryPage {
-    get cartLink() {
+    get cartButton() {
         return $('.shopping_cart_link');
     }
 
@@ -12,7 +12,7 @@ class InventoryPage {
     }
 
     async openCart() {
-        await this.cartLink.click();
+        await this.cartButton.click();
     }
 }
 

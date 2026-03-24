@@ -1,8 +1,9 @@
 const LoginPage = require('../pageobjects/login.page');
 const InventoryPage = require('../pageobjects/inventory.page');
+const CartPage = require('../pageobjects/cart.page');
 const CheckoutPage = require('../pageobjects/checkout.page');
 const CheckoutCompletePage = require('../pageobjects/checkout.complete.page');
-const CartPage = require('../pageobjects/cart.page');
+
 
 describe('UC-1 Checkout Flow', () => {
     it('should allow a standard user to add a product to cart and complete checkout successfully', async() => {
@@ -15,9 +16,9 @@ describe('UC-1 Checkout Flow', () => {
         await InventoryPage.openCart();
 
         await CartPage.isProductDisplayed(productName);
-        await CartPage.clickCheckout();
+        await CartPage.proceedToCheckout();
 
-        await CheckoutPage.fillInformation('John', 'Doe', '12345');
+        await CheckoutPage.fillCheckoutInformation('John', 'Doe', '12345');
         await CheckoutPage.finishCheckout();
 
         await CheckoutCompletePage.verifySuccessMessage();

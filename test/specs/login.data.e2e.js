@@ -14,7 +14,7 @@ describe('UC-2 Data-Driven Login Validation', () => {
         }
     ];
 
-    users.forEach(({username, password, shouldPass}) => {
+    users.forEach(({ username, password, shouldPass }) => {
         it(shouldPass
             ? `should allow ${username} to log in successfully`
             : `should display an error message for ${username}`, async () => {

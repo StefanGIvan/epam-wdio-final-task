@@ -3,15 +3,15 @@ class CartPage {
         return $('#checkout');
     }
 
-    itemName(productName) {
+    getCartItem(productName) {
         return $(`.inventory_item_name=${productName}`);
     }
 
     async isProductDisplayed(productName) {
-        await expect(this.itemName(productName)).toBeDisplayed();
+        await expect(this.getCartItem(productName)).toBeDisplayed();
     }
 
-    async clickCheckout() {
+    async proceedToCheckout() {
         await this.checkoutButton.click();
     }
 }

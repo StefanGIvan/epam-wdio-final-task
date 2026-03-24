@@ -19,7 +19,7 @@ class CheckoutPage {
         return $('#finish');
     }
 
-    async fillInformation(firstName, lastName, postalCode) {
+    async fillCheckoutInformation(firstName, lastName, postalCode) {
         await this.firstNameInput.setValue(firstName);
         await this.lastNameInput.setValue(lastName);
         await this.postalCodeInput.setValue(postalCode);
