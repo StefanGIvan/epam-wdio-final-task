@@ -5,7 +5,7 @@ const CheckoutCompletePage = require('../pageobjects/checkout.complete.page');
 const CartPage = require('../pageobjects/cart.page');
 
 describe('UC-1 Checkout Flow', () => {
-    it('should complete checkout successfully for a selected product', async() => {
+    it('should allow a standard user to add a product to cart and complete checkout successfully', async() => {
         const productName = 'Sauce Labs Backpack';
 
         await LoginPage.open();

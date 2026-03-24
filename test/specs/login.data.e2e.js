@@ -1,6 +1,6 @@
 const LoginPage = require('../pageobjects/login.page');
 
-describe('UC-2 Data Driven Login', () => {
+describe('UC-2 Data-Driven Login Validation', () => {
     const users = [
         {
             username: 'standard_user',
@@ -15,7 +15,9 @@ describe('UC-2 Data Driven Login', () => {
     ];
 
     users.forEach(({username, password, shouldPass}) => {
-        it(`should validate login for ${username}`, async () => {
+        it(shouldPass
+            ? `should allow ${username} to log in successfully`
+            : `should display an error message for ${username}`, async () => {
             await LoginPage.open();
             await LoginPage.login(username, password);
 
