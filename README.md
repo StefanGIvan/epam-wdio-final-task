@@ -30,9 +30,6 @@ https://www.saucedemo.com/
 
 - Created `.gitignore` to exclude:
     - `node_modules/`
-    - `allure-results/`
-    - `allure-report/`
-
 
 ## Test Implementation
 
